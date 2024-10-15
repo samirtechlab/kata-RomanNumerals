@@ -2,14 +2,19 @@ package samir.kata;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class ConverterTest {
 
+  List<Converter> converters = new ArrayList<>();
+
   @Before
   public void setUp() throws Exception {
+  converters.add(new IConverter());
   }
 
   @After
@@ -18,12 +23,12 @@ public class ConverterTest {
 
   @Test
   public void shouldBe1forI(){
-    assertEquals(1, IConvertor.calculate("I"));
+    assertEquals(1, Calculator.calculate("I", converters));
   }
 
   @Test
   public void shouldIncrementI(){
-    assertEquals(2, IConvertor.calculate("II"));
+    assertEquals(2, Calculator.calculate("II", converters));
   }
 
 

@@ -1,0 +1,41 @@
+package samir.kata;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Calculator {
+
+  public static int calculate(String romanNumerals, List<Converter> converters) {
+
+    int result = 0;
+    char previousNumber = Character.MIN_VALUE;
+    for (int i = 0; i < romanNumerals.length(); i++) {
+      for (Converter convertor : converters) {
+        if(i-1 >= 0) {
+          previousNumber = romanNumerals.toCharArray()[i--];
+        }
+        result += convertor.convert(romanNumerals.toCharArray()[i], previousNumber);
+      }
+    }
+    return result;
+  }
+
+  public static void main(String[] args) {
+
+    var X = 10;
+
+    var test = "III";
+
+    var convertors = new ArrayList<Converter>(Arrays.asList(new IConverter()));
+
+
+
+
+
+
+
+  }
+}
