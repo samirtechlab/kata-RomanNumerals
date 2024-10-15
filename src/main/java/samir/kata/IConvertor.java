@@ -1,6 +1,6 @@
 package samir.kata;
 
-public class IConverter extends Converter{
+public class IConvertor implements Convertor {
 
   int numeralValue = 1;
   char romanValue = 'I';

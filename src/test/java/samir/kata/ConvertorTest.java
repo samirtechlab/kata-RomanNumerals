@@ -8,13 +8,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ConverterTest {
+public class ConvertorTest {
 
-  List<Converter> converters = new ArrayList<>();
+  List<Convertor> converters = new ArrayList<>();
 
   @Before
   public void setUp() throws Exception {
-  converters.add(new IConverter());
+  converters.add(new IConvertor());
   converters.add(new XConvertor());
   }
 

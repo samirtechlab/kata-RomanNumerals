@@ -8,13 +8,13 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Calculator {
 
-  public static int calculate(String romanNumerals, List<Converter> converters) {
+  public static int calculate(String romanNumerals, List<Convertor> converters) {
 
     int result = 0;
     char previousNumber = Character.MIN_VALUE;
 
     for (int i = 0; i < romanNumerals.length(); i++) {
-      for (Converter convertor : converters) {
+      for (Convertor convertor : converters) {
         System.out.println(previousNumber + " " + i);
         if(i-1 >= 0) {
           var previousIteration = i - 1;
@@ -33,7 +33,7 @@ public class Calculator {
 
     var test = "III";
 
-    var convertors = new ArrayList<Converter>(Arrays.asList(new IConverter()));
+    var convertors = new ArrayList<Convertor>(Arrays.asList(new IConvertor()));
 
 
 
