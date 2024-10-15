@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,7 +12,7 @@ public class ConvertorTest {
   List<Convertor> converters = new ArrayList<>();
 
   @Before
-  public void setUp() throws Exception {
+  public void setUp() {
     converters.add(new IConvertor());
     converters.add(new VConvertor());
     converters.add(new XConvertor());
@@ -21,10 +20,6 @@ public class ConvertorTest {
     converters.add(new CConvertor());
     converters.add(new DConvertor());
     converters.add(new MConvertor());
-  }
-
-  @After
-  public void tearDown() throws Exception {
   }
 
   @Test
@@ -101,6 +96,26 @@ public class ConvertorTest {
   @Test
   public void shouldBe900forCM() {
     assertEquals(900, Calculator.calculate("CM", converters));
+  }
+
+  @Test
+  public void shouldBe123forCXXIII() {
+    assertEquals(123, Calculator.calculate("CXXIII", converters));
+  }
+
+  @Test
+  public void shouldBe2628forMMDCXXVIII() {
+    assertEquals(2628, Calculator.calculate("MMDCXXVIII", converters));
+  }
+
+  @Test
+  public void shouldBe463forCDLXIII() {
+    assertEquals(463, Calculator.calculate("CDLXIII", converters));
+  }
+
+  @Test
+  public void shouldBe1494forMCDXCIV() {
+    assertEquals(1494, Calculator.calculate("MCDXCIV", converters));
   }
 
 }
