@@ -18,6 +18,7 @@ public class ConvertorTest {
     converters.add(new VConvertor());
     converters.add(new XConvertor());
     converters.add(new LConvertor());
+    converters.add(new CConvertor());
   }
 
   @After
@@ -70,5 +71,14 @@ public class ConvertorTest {
     assertEquals(40, Calculator.calculate("XL", converters));
   }
 
+  @Test
+  public void shouldBe100forC() {
+    assertEquals(100, Calculator.calculate("C", converters));
+  }
+
+  @Test
+  public void shouldBe90forXC() {
+    assertEquals(90, Calculator.calculate("XC", converters));
+  }
 
 }
