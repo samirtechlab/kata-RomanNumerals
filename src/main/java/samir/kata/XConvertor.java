@@ -9,5 +9,4 @@ public class XConvertor extends Convertor {
     super.previousValueThanSub = 'I';
     super.valuePreviousValueThanSub = 1;
   }
-
 }

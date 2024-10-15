@@ -7,5 +7,4 @@ public class IConvertor extends Convertor {
     super.numeralValue = 1;
     super.romanValue = 'I';
   }
-
 }
