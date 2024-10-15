@@ -16,6 +16,8 @@ public class ConvertorTest {
   public void setUp() throws Exception {
   converters.add(new IConvertor());
   converters.add(new XConvertor());
+  converters.add(new VConvertor());
+  converters.add(new LConvertor());
   }
 
   @After
@@ -33,6 +35,16 @@ public class ConvertorTest {
   }
 
   @Test
+  public void shouldBe5forV(){
+    assertEquals(89, Calculator.calculate("LXXXIX", converters));
+  }
+
+  @Test
+  public void shouldIncrementVI(){
+    assertEquals(6, Calculator.calculate("VI", converters));
+  }
+
+  @Test
   public void shouldBe10forX(){
     assertEquals(10, Calculator.calculate("X", converters));
   }
@@ -45,6 +57,17 @@ public class ConvertorTest {
   @Test
   public void shouldBe9forIX(){
     assertEquals(9, Calculator.calculate("IX", converters));
+  }
+
+  @Test
+  public void shouldBe50forL(){
+    assertEquals(50, Calculator.calculate("L", converters));
+  }
+
+
+  @Test
+  public void shouldBe40forXL(){
+    assertEquals(40, Calculator.calculate("XL", converters));
   }
 
 

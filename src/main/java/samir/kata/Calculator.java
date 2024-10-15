@@ -20,7 +20,6 @@ public class Calculator {
           var previousIteration = i - 1;
           previousNumber = romanNumerals.toCharArray()[previousIteration];
         }
-        System.out.println("----- " + previousNumber);
         result += convertor.convert(romanNumerals.toCharArray()[i], previousNumber);
       }
     }
