@@ -31,6 +31,21 @@ public class ConverterTest {
     assertEquals(2, Calculator.calculate("II", converters));
   }
 
+  @Test
+  public void shouldBe10forX(){
+    assertEquals(10, Calculator.calculate("X", converters));
+  }
+
+  @Test
+  public void shouldIncrementX(){
+    assertEquals(20, Calculator.calculate("XX", converters));
+  }
+
+  @Test
+  public void shouldBe9forIX(){
+    assertEquals(9, Calculator.calculate("IX", converters));
+  }
+
 
 
 
