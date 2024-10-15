@@ -20,6 +20,7 @@ public class ConvertorTest {
     converters.add(new LConvertor());
     converters.add(new CConvertor());
     converters.add(new DConvertor());
+    converters.add(new MConvertor());
   }
 
   @After
@@ -90,6 +91,16 @@ public class ConvertorTest {
   @Test
   public void shouldBe400forCD() {
     assertEquals(400, Calculator.calculate("CD", converters));
+  }
+
+  @Test
+  public void shouldBe1000forM() {
+    assertEquals(1000, Calculator.calculate("M", converters));
+  }
+
+  @Test
+  public void shouldBe900forCM() {
+    assertEquals(900, Calculator.calculate("CM", converters));
   }
 
 }
