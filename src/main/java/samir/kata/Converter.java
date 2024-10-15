@@ -5,7 +5,7 @@ public abstract class Converter {
   int numeralValue = 0;
   char romanValue = 'I';
 
-  abstract int convert(char romanNumeral, char nextRomanNumeral);
+  abstract int convert(char romanNumeral, char previousRomanNumeral);
 
  abstract int subtract(char previousRomanNumeral);
 

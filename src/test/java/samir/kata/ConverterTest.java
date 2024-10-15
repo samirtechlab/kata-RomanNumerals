@@ -15,6 +15,7 @@ public class ConverterTest {
   @Before
   public void setUp() throws Exception {
   converters.add(new IConverter());
+  converters.add(new XConvertor());
   }
 
   @After

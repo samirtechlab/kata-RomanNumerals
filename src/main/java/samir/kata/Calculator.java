@@ -12,11 +12,15 @@ public class Calculator {
 
     int result = 0;
     char previousNumber = Character.MIN_VALUE;
+
     for (int i = 0; i < romanNumerals.length(); i++) {
       for (Converter convertor : converters) {
+        System.out.println(previousNumber + " " + i);
         if(i-1 >= 0) {
-          previousNumber = romanNumerals.toCharArray()[i--];
+          var previousIteration = i - 1;
+          previousNumber = romanNumerals.toCharArray()[previousIteration];
         }
+        System.out.println("----- " + previousNumber);
         result += convertor.convert(romanNumerals.toCharArray()[i], previousNumber);
       }
     }
