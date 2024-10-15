@@ -1,25 +1,13 @@
 package samir.kata;
 
-public class XConvertor implements Convertor {
-  int numeralValue = 10;
-  char romanValue = 'X';
+public class XConvertor extends Convertor {
 
-  char previousValueThanSub = 'I';
-  int valuePreviousValueThanSub = 1;
-
-  @Override
-  public int convert(char romanNumeral, char previousRomanNumeral) {
-    return isMe(romanNumeral) ? (numeralValue - subtract(previousRomanNumeral)) : 0;
-  }
-
-  @Override
-  public int subtract(char previousRomanNumeral) {
-    return previousRomanNumeral == previousValueThanSub ? valuePreviousValueThanSub*2 : 0;
-  }
-
-  @Override
-  public boolean isMe(char romanNumeral) {
-    return romanNumeral == romanValue;
+  public XConvertor() {
+    super();
+    super.numeralValue = 10;
+    super.romanValue = 'X';
+    super.previousValueThanSub = 'I';
+    super.valuePreviousValueThanSub = 1;
   }
 
 }

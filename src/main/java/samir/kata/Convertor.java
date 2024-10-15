@@ -9,8 +9,6 @@ public abstract class Convertor {
 
   public Convertor() {}
 
-
-
   public int convert(char romanNumeral, char previousRomanNumeral) {
     return isMe(romanNumeral) ? (numeralValue - subtract(previousRomanNumeral)) : 0;
   }

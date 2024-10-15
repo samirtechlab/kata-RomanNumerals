@@ -1,6 +1,6 @@
 package samir.kata;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ public class ConvertorTest {
 
   @Before
   public void setUp() throws Exception {
-  //converters.add(new IConvertor());
-  //converters.add(new XConvertor());
-  converters.add(new VConvertor());
-  //converters.add(new LConvertor());
+    converters.add(new IConvertor());
+    converters.add(new VConvertor());
+    converters.add(new XConvertor());
+    converters.add(new LConvertor());
   }
 
   @After
@@ -25,52 +25,50 @@ public class ConvertorTest {
   }
 
   @Test
-  public void shouldBe1forI(){
+  public void shouldBe1forI() {
     assertEquals(1, Calculator.calculate("I", converters));
   }
 
   @Test
-  public void shouldIncrementI(){
+  public void shouldIncrementI() {
     assertEquals(2, Calculator.calculate("II", converters));
   }
 
   @Test
-  public void shouldBe5forV(){
+  public void shouldBe5forV() {
     assertEquals(5, Calculator.calculate("V", converters));
   }
 
   @Test
-  public void shouldIncrementVI(){
+  public void shouldIncrementVI() {
     assertEquals(6, Calculator.calculate("VI", converters));
   }
 
   @Test
-  public void shouldBe10forX(){
+  public void shouldBe10forX() {
     assertEquals(10, Calculator.calculate("X", converters));
   }
 
   @Test
-  public void shouldIncrementX(){
+  public void shouldIncrementX() {
     assertEquals(20, Calculator.calculate("XX", converters));
   }
 
   @Test
-  public void shouldBe9forIX(){
+  public void shouldBe9forIX() {
     assertEquals(9, Calculator.calculate("IX", converters));
   }
 
   @Test
-  public void shouldBe50forL(){
+  public void shouldBe50forL() {
     assertEquals(50, Calculator.calculate("L", converters));
   }
 
 
   @Test
-  public void shouldBe40forXL(){
+  public void shouldBe40forXL() {
     assertEquals(40, Calculator.calculate("XL", converters));
   }
-
-
 
 
 }

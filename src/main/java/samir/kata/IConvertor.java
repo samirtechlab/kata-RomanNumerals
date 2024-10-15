@@ -1,25 +1,11 @@
 package samir.kata;
 
-public class IConvertor implements Convertor {
+public class IConvertor extends Convertor {
 
-  int numeralValue = 1;
-  char romanValue = 'I';
-
-  @Override
-  public int convert(char romanNumeral, char previousRomanNumeral) {
-
-    return isMe(romanNumeral) ? numeralValue : 0;
-  }
-
-  @Override
-  public int subtract(char previousRomanNumeral) {
-    return 0;
-  }
-
-
-  @Override
-  public boolean isMe(char romanNumeral) {
-    return romanNumeral == romanValue;
+  public IConvertor() {
+    super();
+    super.numeralValue = 1;
+    super.romanValue = 'I';
   }
 
 }
