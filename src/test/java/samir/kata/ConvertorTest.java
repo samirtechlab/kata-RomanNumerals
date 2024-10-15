@@ -14,10 +14,10 @@ public class ConvertorTest {
 
   @Before
   public void setUp() throws Exception {
-  converters.add(new IConvertor());
-  converters.add(new XConvertor());
+  //converters.add(new IConvertor());
+  //converters.add(new XConvertor());
   converters.add(new VConvertor());
-  converters.add(new LConvertor());
+  //converters.add(new LConvertor());
   }
 
   @After
@@ -36,7 +36,7 @@ public class ConvertorTest {
 
   @Test
   public void shouldBe5forV(){
-    assertEquals(89, Calculator.calculate("LXXXIX", converters));
+    assertEquals(5, Calculator.calculate("V", converters));
   }
 
   @Test

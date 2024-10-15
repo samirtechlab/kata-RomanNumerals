@@ -32,7 +32,6 @@ public class Calculator {
 
     var test = "III";
 
-    var convertors = new ArrayList<Convertor>(Arrays.asList(new IConvertor()));
 
 
 

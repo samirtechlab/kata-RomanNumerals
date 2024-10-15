@@ -1,10 +1,25 @@
 package samir.kata;
 
-public interface Convertor {
+public abstract class Convertor {
+  int numeralValue;
+  char romanValue;
 
-   int convert(char romanNumeral, char previousRomanNumeral);
+  char previousValueThanSub;
+  int valuePreviousValueThanSub;
 
-  int subtract(char previousRomanNumeral);
+  public Convertor() {}
 
- boolean isMe(char romanNumeral);
+
+
+  public int convert(char romanNumeral, char previousRomanNumeral) {
+    return isMe(romanNumeral) ? (numeralValue - subtract(previousRomanNumeral)) : 0;
+  }
+
+  public int subtract(char previousRomanNumeral) {
+    return previousRomanNumeral == previousValueThanSub ? valuePreviousValueThanSub*2 : 0;
+  }
+
+  public boolean isMe(char romanNumeral) {
+    return romanNumeral == romanValue;
+  }
 }

@@ -1,25 +1,12 @@
 package samir.kata;
 
-public class VConvertor implements Convertor {
+public class VConvertor extends Convertor {
 
-  int numeralValue = 5;
-  char romanValue = 'V';
-
-  char previousValueThanSub = 'I';
-  int valuePreviousValueThanSub = 1;
-
-  @Override
-  public int convert(char romanNumeral, char previousRomanNumeral) {
-    return isMe(romanNumeral) ? (numeralValue - subtract(previousRomanNumeral)) : 0;
-  }
-
-  @Override
-  public int subtract(char previousRomanNumeral) {
-    return previousRomanNumeral == previousValueThanSub ? valuePreviousValueThanSub*2 : 0;
-  }
-
-  @Override
-  public boolean isMe(char romanNumeral) {
-    return romanNumeral == romanValue;
+  public VConvertor() {
+    super();
+    super.numeralValue = 5;
+    super.romanValue = 'V';
+    super.previousValueThanSub = 'I';
+    super.valuePreviousValueThanSub = 1;
   }
 }
